@@ -1,14 +1,6 @@
-const persons = {
-    name1:"john",
-    name2:"michael",
-    name3:"alan",
-    name4:"james"
-};
-let result = `Hey welocme   ${persons.name1}!`+" <br> " 
-+`Hey welocme   ${persons.name2}!`+"<br>"
-+`Hey welocme   ${persons.name3}!`+"<br>"
-+`Hey welocme   ${persons.name4}!`+"<br>"
-
-
-
+let persons = ["john","michael", "alan", "james"];
+let result=""
+for(let i =0; i<persons.length; i++){
+result += `Hey welocme ${persons[i]}!   <br>`;
+}
 document.getElementById("para").innerHTML= result;

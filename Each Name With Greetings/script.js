@@ -12,4 +12,3 @@ let result = `Hey welocme   ${persons.name1}!`+" <br> "
 
 
 document.getElementById("para").innerHTML= result;
-

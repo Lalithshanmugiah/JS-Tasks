@@ -11,4 +11,4 @@ const person = {
 
   document.getElementById("para").innerHTML= `key ${key[0]}  value ${person.Name} <br> 
   key ${key[1]}  value ${person.age} <br> 
-  key ${key[2]}  value ${person.city}`
+  key ${key[2]}  value ${person.city}`;

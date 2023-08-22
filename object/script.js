@@ -3,7 +3,9 @@ const person = {
     age : 50,
     city: "America"
   };
-  
-  
-  document.getElementById("para").innerHTML ="Name:"+
-  person.Name + " " +"<br>" +"age:" +person.age + "<br>"+ "city:"+person.city; 
+  let text =""
+  for(let x in person){
+  text += person[x];
+  }
+
+  document.getElementById("para").innerHTML=key - + text + " "+ value - + " ";

@@ -1,7 +1,7 @@
 const person =["john", "michael","alan","james"];
 let text ="";
 let i =0;
-while(i<4){
+while(i<person.length){
 text += person[i] +"<br>"
 i++;
 }

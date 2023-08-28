@@ -36,6 +36,7 @@ function myFunction() {
     result.textContent = `${name} - Date: ${Time}`;
     output.appendChild(result);
 
+
     message.textContent = "";
     input.value = "";
 }

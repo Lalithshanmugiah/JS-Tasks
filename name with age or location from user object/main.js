@@ -1,25 +1,28 @@
-const user ={
-    firstName: '',
-    lastName:'',
-    age:'',
-    location:'',
-    storeInformation: function() {
-        this.firstName = document.getElementById('firstName').value;
-        this.lastName = document.getElementById('lastName').value;
-        this.age = document.getElementById('age').value;
-        this.location = document.getElementById('location').value;
-        
-    },
-    displayoutput: function(type) {
-        const output = `${this.firstName} ${this.lastName} ${
-            type === 'age' ? this.age : this.location
-        }`;
-        document.getElementById('output').innerHTML = output;
-        
+const user = {
+    firstName: "",
+    lastName: "",
+    age: 0,
+    location: "",
+    storeInfo: function (fname, lname, age, location) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = age;
+        this.location = location;
     }
 };
-document.getElementById('output').innerHTML = `
-            <button onclick="user.displayoutput('age')">Age Button</button>
-            <button onclick="user.displayoutput('location')">Location Button</button>`;
 
-document.getElementById('Button').addEventListener('click', () => user.storeInformation());
+function storeUserInfo(){
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const age = document.getElementById("age").value;
+    const location = document.getElementById("location").value;
+
+    user.storeInfo(firstName,lastName,age,location);
+
+     document.getElementById("buttons").style.display="block";   
+}
+
+function displayInfo(type){
+    const output = type === 'age'? `${user.firstName} ${user.lastName} ${user.age}` : `${user.firstName} ${user.lastName}  ${user.location}`
+    document.getElementById("output").textContent= output;
+}

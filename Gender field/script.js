@@ -1,10 +1,10 @@
 
 const storeButton = document.getElementById('storeButton');
-const name = document.getElementById('name');
-const gender = document.getElementById('gender');
-const maleNames = document.getElementById('maleNames');
-const femaleNames = document.getElementById('femaleNames');
-const otherNames = document.getElementById('otherNames');
+const nameInput = document.getElementById('name');
+const genderInput = document.getElementById('gender');
+const maleNamesList = document.getElementById('maleNames');
+const femaleNamesList = document.getElementById('femaleNames');
+const otherNamesList = document.getElementById('otherNames');
 
 storeButton.addEventListener('click', function() {
   const name = nameInput.value;
@@ -14,14 +14,14 @@ storeButton.addEventListener('click', function() {
   nameItem.textContent = name;
 
   if (gender === 'Male') {
-    maleNames.appendChild(nameItem);
+    maleNamesList.appendChild(nameItem);
   } else if (gender === 'Female') {
-    femaleNames.appendChild(nameItem);
+    femaleNamesList.appendChild(nameItem);
   } else {
-    otherNames.appendChild(nameItem);
+    otherNamesList.appendChild(nameItem);
   }
 
   
-  name.value = '';
-  gender.value = 'male'; 
+  nameInput.value = '';
+  genderInput.value = 'male'; 
 });

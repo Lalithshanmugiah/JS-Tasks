@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Basics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <h1>Make Your TODO List Here</h1>
+  <div class="container">
+    <div class="left">
+      <form id="form">
+        <label for=""><h2>Add List Here<h2></label>
+        <br><br>
+       <input type="text" id ='input'>
+       <input type ='date' id ='date'>
+       <input type='time' id ='time'>
+       
+        <br><br>
+        <div id="result"></div>
+        <button type="submit">Add</button>
+        <h3>Your List</h3>
+        <div id="lists">
+          <div>
+            <p></p>
+            <span class="options">
+              <!--<i onClick="editPost(this)" class="fas fa-edit"></i>-->
+              <!--<i onClick="deletePost(this)" class="fas fa-trash-alt"></i>-->
+            </span>
+          </div>
+      </form>
+    </div>
+     
+        <div>
+          <p></p>
+          <span class="options">
+            <!--<i onClick="editPost(this)" class="fas fa-edit"></i>-->
+            <!--<i onClick="deletePost(this)" class="fas fa-trash-alt"></i>-->
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>

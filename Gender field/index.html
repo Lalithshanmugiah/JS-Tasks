@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information</title>
+
+</head>
+<body>
+  <h1>Gender Information</h1>
+  
+  <form id="studentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+    
+    <button type="button" id="storeButton">Submit</button>
+  </form>
+  
+  <div class="container" id="maleContainer">
+    <h2>Male Names:</h2>
+    <ul id="maleNames"></ul>
+  </div>
+  
+  <div class="container" id="femaleContainer">
+    <h2>Female Names:</h2>
+    <ul id="femaleNames"></ul>
+  </div>
+  
+  <div class="container" id="otherContainer">
+    <h2>Other Names:</h2>
+    <ul id="otherNames"></ul>
+  </div>
+  <script src ='script.js'></script>
+ 
+</body>
+</html>

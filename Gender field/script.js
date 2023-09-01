@@ -1,27 +1,20 @@
+function storeInformation() {
+  const name = document.getElementById("name").value;
+  const gender = document.getElementById("gender").value;
+  const color = document.getElementById("color").value;
 
-const storeButton = document.getElementById('storeButton');
-const nameInput = document.getElementById('name');
-const genderInput = document.getElementById('gender');
-const maleNamesList = document.getElementById('maleNames');
-const femaleNamesList = document.getElementById('femaleNames');
-const otherNamesList = document.getElementById('otherNames');
+  const listItem = document.createElement("li");
+  listItem.textContent = name;
+  listItem.style.backgroundColor = color;
 
-storeButton.addEventListener('click', function() {
-  const name = nameInput.value;
-  const gender = genderInput.value;
-
-  const nameItem = document.createElement('li');
-  nameItem.textContent = name;
-
-  if (gender === 'Male') {
-    maleNamesList.appendChild(nameItem);
-  } else if (gender === 'Female') {
-    femaleNamesList.appendChild(nameItem);
+  if (gender === "male") {
+      document.getElementById("maleNames").appendChild(listItem);
+      listItem.classList.add("male");
+  } else if (gender === "female") {
+      document.getElementById("femaleNames").appendChild(listItem);
+      listItem.classList.add("female");
   } else {
-    otherNamesList.appendChild(nameItem);
+      document.getElementById("otherNames").appendChild(listItem);
+      listItem.classList.add("others");
   }
-
-  
-  nameInput.value = '';
-  genderInput.value = 'male'; 
-});
+}
